@@ -4,6 +4,7 @@ import HowItWorks from "./components/HowItWorks";
 import About from "./components/About";
 import FAQs from "./components/FAQs";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             <About />
             <FAQs />
             <Contact />
+            <Footer />
         </div>
     );
 }
