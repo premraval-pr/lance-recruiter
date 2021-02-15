@@ -6,6 +6,21 @@ const Styles = styled.div`
     .icon {
         color: black;
     }
+    .link {
+        background: linear-gradient(to right, #ff9800 49%, transparent 0);
+        background-position: right;
+        background-size: 200%;
+        padding: 0px 10px;
+        transition: background-position 0.2s;
+        :hover {
+            background-position: left;
+            font-weight: 500;
+        }
+    }
+    .bar {
+        padding: 0px 2.5px;
+        background: #ff9800;
+    }
 `;
 
 const Footer = (props) => {
@@ -17,26 +32,48 @@ const Footer = (props) => {
                         <Col className="my-3">
                             <span className="h5">Company</span>
                             <div className="mt-3">
-                                Careers<br></br>
-                                About<br></br>
-                                Blog<br></br>
-                                Partners<br></br>
+                                <span className="bar" />
+                                <span className="link">Careers</span>
+                                <br></br>
+                                <span className="bar" />
+                                <span className="link">About</span>
+                                <br></br>
+                                <span className="bar" />
+                                <span className="link">Blog</span>
+                                <br></br>
+                                <span className="bar" />
+                                <span className="link">Partners</span>
+                                <br></br>
                             </div>
                         </Col>
                         <Col className="my-3">
                             <span className="h5">Legal</span>
                             <div className="mt-3">
-                                Terms and Conditions<br></br>
-                                Privacy policy<br></br>
+                                <span className="bar" />
+                                <span className="link">
+                                    Terms and Conditions
+                                </span>
+                                <br></br>
+                                <span className="bar" />
+                                <span className="link">Privacy Policy</span>
+                                <br></br>
                             </div>
                         </Col>
                         <Col className="my-3">
                             <span className="h5">Latest Updates</span>
                             <div className="mt-3">
-                                Platform<br></br>
-                                Android<br></br>
-                                iOS<br></br>
-                                Beta Features<br></br>
+                                <span className="bar" />
+                                <span className="link">Platform</span>
+                                <br></br>
+                                <span className="bar" />
+                                <span className="link">Android</span>
+                                <br></br>
+                                <span className="bar" />
+                                <span className="link">iOS</span>
+                                <br></br>
+                                <span className="bar" />
+                                <span className="link">Beta Features</span>
+                                <br></br>
                             </div>
                         </Col>
                         <Col xs={5} className="text-center mt-5">

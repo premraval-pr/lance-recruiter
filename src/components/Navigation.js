@@ -7,7 +7,7 @@ const Navigation = (props) => {
         <Navbar expand="lg" bg="light" variant="light">
             <Navbar.Brand>
                 <img width="7%" height="7%" src={logo} />
-                <span className="mx-3">Lance Recruiter</span>
+                <span className="mx-3">LanceRecruiter</span>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
