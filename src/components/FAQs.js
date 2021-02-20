@@ -16,7 +16,7 @@ const Styles = styled.div`
 const FAQs = (props) => {
     return (
         <Styles>
-            <div className="main-bg text-center">
+            <div className="main-bg text-center pt-5" id="faq">
                 <p className="display-1 m-5">FAQs</p>
                 <p className="display-1 m-5 text-white">FAQs</p>
                 <p className="display-1 m-5">FAQs</p>
