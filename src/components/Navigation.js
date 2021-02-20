@@ -2,13 +2,6 @@ import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import logo from "../assets/logo.png";
 import { NavHashLink } from "react-router-hash-link";
-import styled from "styled-components";
-
-const Styles = styled.div`
-    .selected {
-        background: yellow;
-    }
-`;
 
 const Navigation = (props) => {
     return (
