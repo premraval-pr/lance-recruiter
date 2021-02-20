@@ -6,6 +6,14 @@ const Styles = styled.div`
     .icon {
         color: black;
     }
+    .flip:hover {
+        animation: spin 0.5s linear infinite;
+    }
+    @keyframes spin {
+        100% {
+            transform: rotateY(-360deg);
+        }
+    }
     .link {
         background: linear-gradient(to right, #ff9800 49%, transparent 0);
         background-position: right;
@@ -78,19 +86,19 @@ const Footer = (props) => {
                         </Col>
                         <Col xs={5} className="text-center mt-5">
                             <Row>
-                                <Col>
+                                <Col className="flip">
                                     <i className="fa fa-4x fa-facebook icon"></i>
                                 </Col>
-                                <Col>
+                                <Col className="flip">
                                     <i className="fa fa-4x fa-linkedin icon"></i>
                                 </Col>
-                                <Col>
+                                <Col className="flip">
                                     <i className="fa fa-4x fa-instagram icon"></i>
                                 </Col>
-                                <Col>
+                                <Col className="flip">
                                     <i className="fa fa-4x fa-twitter icon"></i>
                                 </Col>
-                                <Col>
+                                <Col className="flip">
                                     <i className="fa fa-4x fa-youtube icon"></i>
                                 </Col>
                             </Row>
