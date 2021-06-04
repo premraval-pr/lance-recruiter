@@ -1,19 +1,30 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import logo from "../assets/logo.png";
+import nav_logo from "../assets/nav_logo.png";
 import { NavHashLink } from "react-router-hash-link";
 
 const Navigation = (props) => {
+    const activeColor = "#585be6";
+    const color = "#F18805";
+
     return (
-        <Navbar expand="xl" bg="dark" variant="light" sticky="top">
+        <Navbar
+            expand="md"
+            variant="dark"
+            sticky="top"
+            style={{ backgroundColor: "#FAFAFA" }}
+        >
             <Navbar.Brand>
-                <img width="10%" height="10%" src={logo} alt="Logo" />
-                <span
-                    className="mx-3"
-                    style={{ fontSize: "120%", color: "whitesmoke" }}
-                >
-                    LanceRecruiter
-                </span>
+                <NavHashLink smooth to="/#home">
+                    <img width="5%" height="5%" src={logo} alt="Logo" />
+                    <img
+                        width="20%"
+                        height="10%"
+                        src={nav_logo}
+                        alt="Nav Logo"
+                    />
+                </NavHashLink>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -23,11 +34,10 @@ const Navigation = (props) => {
                             smooth
                             to="/#home"
                             activeStyle={{
-                                color: "whitesmoke",
+                                color: activeColor,
                             }}
                             style={{
-                                fontSize: "150%",
-                                color: "gray",
+                                color: color,
                                 textDecoration: "none",
                             }}
                             className="m-3"
@@ -40,16 +50,15 @@ const Navigation = (props) => {
                             smooth
                             to="/#how-it-works"
                             activeStyle={{
-                                color: "whitesmoke",
+                                color: activeColor,
                             }}
                             style={{
-                                fontSize: "150%",
-                                color: "gray",
+                                color: color,
                                 textDecoration: "none",
                             }}
-                            className="m-3"
+                            className="m-3 text-nowrap"
                         >
-                            How it works
+                            How It Works
                         </NavHashLink>
                     </Nav.Item>
                     <Nav.Item>
@@ -57,11 +66,10 @@ const Navigation = (props) => {
                             smooth
                             to="/#about"
                             activeStyle={{
-                                color: "whitesmoke",
+                                color: activeColor,
                             }}
                             style={{
-                                fontSize: "150%",
-                                color: "gray",
+                                color: color,
                                 textDecoration: "none",
                             }}
                             className="m-3"
@@ -74,11 +82,10 @@ const Navigation = (props) => {
                             smooth
                             to="/#faq"
                             activeStyle={{
-                                color: "whitesmoke",
+                                color: activeColor,
                             }}
                             style={{
-                                fontSize: "150%",
-                                color: "gray",
+                                color: color,
                                 textDecoration: "none",
                             }}
                             className="m-3"
@@ -91,11 +98,10 @@ const Navigation = (props) => {
                             smooth
                             to="/#contact"
                             activeStyle={{
-                                color: "whitesmoke",
+                                color: activeColor,
                             }}
                             style={{
-                                fontSize: "150%",
-                                color: "gray",
+                                color: color,
                                 textDecoration: "none",
                             }}
                             className="m-3"
@@ -108,16 +114,15 @@ const Navigation = (props) => {
                             smooth
                             to="/login"
                             activeStyle={{
-                                color: "whitesmoke",
+                                color: activeColor,
                             }}
                             style={{
-                                fontSize: "150%",
-                                color: "gray",
+                                color: color,
                                 textDecoration: "none",
                             }}
                             className="m-3"
                         >
-                            Login/Signup
+                            Signup
                         </NavHashLink>
                     </Nav.Item>
                 </Nav>
