@@ -112,7 +112,7 @@ const Navigation = (props) => {
                     <Nav.Item>
                         <NavHashLink
                             smooth
-                            to="/login"
+                            to="/#signup"
                             activeStyle={{
                                 color: activeColor,
                             }}

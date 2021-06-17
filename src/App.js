@@ -4,6 +4,7 @@ import HowItWorks from "./components/HowItWorks";
 import About from "./components/About";
 import FAQs from "./components/FAQs";
 import Contact from "./components/Contact";
+import SignUp from "./components/SignUp";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -17,7 +18,7 @@ function App() {
                 <About />
                 <FAQs />
                 <Contact />
-                <Route path="/login" exact component={About} />
+                <SignUp />
             </Router>
             <Footer />
         </div>

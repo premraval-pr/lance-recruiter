@@ -24,7 +24,6 @@ const Contact = (props) => {
         map.fitBounds(bounds);
         setMap(map);
     }, []);
-
     const onUnmount = useCallback((map) => setMap(null), []);
 
     return (
@@ -51,7 +50,7 @@ const Contact = (props) => {
                                         borderRadius: "20px",
                                     }}
                                     center={{ lat: 43.636206, lng: -79.40283 }}
-                                    zoom={12}
+                                    zoom={13}
                                     onLoad={onLoad}
                                     onUnmount={onUnmount}
                                 >
@@ -65,7 +64,7 @@ const Contact = (props) => {
                                     />
                                     <InfoWindow
                                         position={{
-                                            lat: 43.646206,
+                                            lat: 43.956206,
                                             lng: -79.40283,
                                         }}
                                     >
