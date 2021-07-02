@@ -12,9 +12,16 @@ const SignUp = () => {
         companyName: "",
         email: "",
         industries: "",
+        type: "company",
     });
     const [location, setLocation] = useState(null);
-    const { firstName, lastName, companyName, email, industries } = formData;
+    const { firstName, lastName, companyName, email, industries, type } =
+        formData;
+
+    const registerClicked = (e) => {
+        e.preventDefault();
+        console.log(formData);
+    };
 
     return (
         <Container id="signup">
@@ -24,6 +31,37 @@ const SignUp = () => {
                         SignUp to get Early Access{" "}
                     </p>
                     <Form className="my-5">
+                        <Row>
+                            <Col>
+                                <Form.Check
+                                    name="userType"
+                                    type="radio"
+                                    label="Company"
+                                    inline
+                                    value="company"
+                                    onChange={() =>
+                                        setFormData({
+                                            ...formData,
+                                            type: "company",
+                                        })
+                                    }
+                                    defaultChecked
+                                />
+                                <Form.Check
+                                    name="userType"
+                                    type="radio"
+                                    label="Recruiter"
+                                    inline
+                                    value="recruiter"
+                                    onChange={() =>
+                                        setFormData({
+                                            ...formData,
+                                            type: "recruiter",
+                                        })
+                                    }
+                                />
+                            </Col>
+                        </Row>
                         <Row>
                             <Col>
                                 <Form.Control
@@ -48,6 +86,21 @@ const SignUp = () => {
                             <Col>
                                 <Form.Control
                                     className="my-2"
+                                    placeholder="Enter Company Name"
+                                    type="email"
+                                    name="companyName"
+                                    value={
+                                        type === "company" ? companyName : "N/A"
+                                    }
+                                    disabled={type !== "company"}
+                                    required
+                                />
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <Form.Control
+                                    className="my-2"
                                     placeholder="Enter Email"
                                     type="email"
                                     name="email"
@@ -62,6 +115,8 @@ const SignUp = () => {
                                     selectProps={{
                                         location,
                                         onChange: setLocation,
+                                        placeholder: "Enter Location",
+                                        className: "my-2",
                                     }}
                                 />
                             </Col>
@@ -126,6 +181,7 @@ const SignUp = () => {
                                     }}
                                     type="submit"
                                     className="my-2 reg-button"
+                                    onClick={registerClicked}
                                     block
                                 >
                                     Register
